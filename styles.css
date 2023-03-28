@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+.container {
+    display: flex;
+    width: 90vw;
+}
+.card {
+    color: rgba(253, 251, 237, 0.886);
+    height: 70vh;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 0 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    flex: 0.5;
+    transition: all 700ms ease-in;
+}
+.card h2 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.card.active {
+    flex: 4;
+}
+.card.active h2 {
+    opacity: 1;
+    transition: opacity 0.3 ease-in 0.4s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+}
